@@ -1,7 +1,6 @@
-# IntroNeuralNetworks in Python: A Template Project
+# IntroNeuralNetworks in Python
 [![forthebadge made-with-python](https://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
-[![GitHub license](https://img.shields.io/badge/License-MIT-brightgreen.svg?style=flat-square)](https://github.com/VivekPa/NeuralNetworkStocks/blob/master/LICENSE.txt) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 IntroNeuralNetworks is a project that **introduces** neural networks and illustrates an example of how one can use neural networks to predict stock prices. It is built with the goal of allowing beginners to understand the fundamentals of how neural network models are built and go through the entire workflow of machine learning. This model is in no way sophisticated, so do improve upon this base project in any way. 
 
@@ -11,8 +10,6 @@ This model is not meant to be used to live trade stocks with. However, with furt
 
 I hope you find this project useful in your journey as a trader or a machine learning engineer. Personally, this is my first major machine learning and python project, so I'll appreciate if you **leave a star**. 
 
-*As a disclaimer, this is a purely educational project. Any backtested results do not guarantee performance in live trading. Do live trading at your own risk.*
-*This guide and further analysis has been cross-posted in my blog, [Engineer Quant](https://medium.com/engineer-quant)*
 
 ## Contents
 - [Contents](#contents)
@@ -28,11 +25,7 @@ I hope you find this project useful in your journey as a trader or a machine lea
   - [LSTM Model](#lstm-model)
 - [Backtesting](#backtesting)
 - [Stock Predictions](#stock-predictions)
-- [Extensions](#extensions)
-  - [Getting Data](#getting-data)
-  - [Neural Network Model](#neuron-network-model)
-  - [Supporting Trade](#supporting-trade)
-- [Contributing](#contributing)
+
 
 ## Overview
 
@@ -122,31 +115,3 @@ X_predict = np.array(stock).reshape((1, 10)) / 200
 print(model.predict(X_predict)*200)
 ```
 
-## Extensions
-
-As mentioned before, this projected is highly extendable, and here some ideas for improving the project.
-
-### Getting Data
-
-Getting data is pretty standard using Yahoo Finance. However, you may want to look into clustering data in terms of trends of stocks (maybe by sector, or if you want to be really precise, use k-means clustering?).
-
-### Neural Network Model
-
-This neural network can be improved in many ways:
-1. Tuning hyperparameters: find the optimal hyperparameters that gives the best prediction 
-2. Backtesting: Make the backtesting system more robust (I have left certain important aspects out for you to figure). Maybe include buying and shorting?
-3. Try different Neural Networks: There are plenty of options and see which works best for your stocks.
-
-### Supporting Trade
-
-As I said earlier, this model can be used to support trading by using this prediction in your trading strategy. Examples include:
-1. Simple long short strategy: you buy if the prediction is higher, and vice versa
-2. Intraday Trading: if you can get your hands on minute data or even tick data, you can use this predictor to trade.
-3. Statistical Arbitrage: use can also use the predictions of various stock prices to find the correlation between stocks. 
-
-## Contributing
-
-Feel free to fork this and submit PRs. I am open and grateful for any suggestions or bug fixes. Hope you enjoy this project!
-
----
-For more content like this, check out my academic blog at [https://medium.com/engineer-quant](https://medium.com/engineer-quant)
